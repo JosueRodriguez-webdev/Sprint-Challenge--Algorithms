@@ -7,14 +7,13 @@ pseudocode with respect to the input size n of each of the following:
 
 ```python
 a)  a = 0
-    while (a < n * n * n):
+    while (a < n * n * n): # n^3
       a = a + n * n
 ```
 
-
 ```
 b)  sum = 0
-    for i in range(n):
+    for i in range(n): # n^2
       j = 1
       while j < n:
         j *= 2
@@ -23,7 +22,7 @@ b)  sum = 0
 
 ```
 c)  def bunnyEars(bunnies):
-      if bunnies == 0:
+      if bunnies == 0: # n
         return 0
 
       return 2 + bunnyEars(bunnies-1)
