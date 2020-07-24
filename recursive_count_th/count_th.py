@@ -7,17 +7,28 @@ counter = {
     0: 0
 }
 
+th_finder = {'th': 0}
+
 
 def count_th(word):
-    print(counter[0], word)
+    # check word[0] and the [1] to see if it matches 'th'
 
-    print(counter)
-    if 'th' in word:
-        remove_one_instance = word.replace('th', 'zz', 1)
-        counter[0] += 1
-        print(counter)
-        return count_th(remove_one_instance)
+    # if the word is less than 2 letters then return the th counter finder
+    if len(word) < 2:
+        result = th_finder['th']
+        th_finder['th'] = 0
+        return result
+    # if yes then counter +=1 and remove the the [0] index
+    if word[0] + word[1] == 'th':
+        th_finder['th'] += 1
+        count_th(word[1:])
     else:
-        hold_count = counter[0]
-        counter[0] = 0
-        return hold_count
+        count_th(word[1:])
+    # else recursive call
+
+
+trial = count_th("abcthxyz")
+print(trial)
+
+trial2 = count_th("caathjs")
+print(trial2)

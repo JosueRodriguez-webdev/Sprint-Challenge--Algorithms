@@ -2,25 +2,18 @@
 
 ## Exercise I
 
-a) n^3 - this one is tough because even though I physically see the n^3 I want to immediately say its n^3 but I tried it with random numbers and it doesn't take long to break the loop. I'm going with my first guess.
+a) n - cancel n's with n's then your left with one n in the while loop. While loop is like a for loop and its based off an input so therefore its O(n)
 
-b) n^2 - while loop inside the for loop and using range to count towards the n.
+b) n log(n) - for loop outside takes in a input so its automatically n. Meanwhile, the nested while loop is not iterating + 1, its skipping \* 2 so its log n.
 
 c) n - recursive is similar to a for loop so and we wont return until it hits 0.
 
 ## Exercise II
 
-Damn this one is tough as well, uhhhhhh...
+I might not be understanding this problem correctly but....
 
-I would ask questions first,
+First of all, assuming f was either giving or there was some sort of formula to calculate it.
 
-Are we assuming f is not passed as a parameter in the function?
-Do we hard code / is there some type of percentage base on floors we should calculate to determine the eggs breaking floor?
-How do we determine the eggs breaking point?
+I would take in an array of the number of stories of the building, assuming its already sorted, do a binary search to see when the eggs break in order to minimize the number of eggs dropped and eggs broken as opposed to a linear approach.
 
-I would require user to pass in array of floors as n.
-I would also require a formula to calculate the when the eggs begin to break in the function
-
-Assuming the formula that calculates the by the length of an array then i would do an if statement and return the value of f.
-
-O(1)
+Solution would be log n
